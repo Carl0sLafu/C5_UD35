@@ -1,0 +1,30 @@
+<h2>Alta cliente</h2>
+
+<form [formGroup]="form">
+
+  <div class="form-group">
+    <label for="name">Nombre</label>
+    <input type="text" class="form-control" id="name" required formControlName="nombre">
+  </div>
+
+  <div class="form-group">
+    <label for="cif">CIF</label>
+    <input type="text" class="form-control" id="cif" required formControlName="cif">
+  </div>
+
+  <div class="form-group">
+    <label for="dir">Dirección</label>
+    <input type="text" class="form-control" id="dir" required formControlName="dir">
+  </div>
+
+  <div class="form-group">
+    <label for="grupo">Grupo</label>
+    <input type="text" class="form-control" id="grupo" required formControlName="group">
+  </div>
+
+  <button class="btn btn-success" (click)="send()" [disabled]="form.invalid">Submit</button>
+</form>
+
+<app-lista [listaclientes]="clientes"></app-lista>
+
+<app-formulariocontacto></app-formulariocontacto>

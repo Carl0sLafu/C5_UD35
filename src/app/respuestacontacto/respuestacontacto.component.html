@@ -1,0 +1,7 @@
+<h2>Listado clientes</h2>
+
+<!-- *ngFor="let cliente of listaclientes" -->
+<div *ngFor="let contacto of listacontacto">
+    <p>{{contacto.nombre}} {{contacto.email}} {{contacto.textarea}} {{contacto.capcha}}</p>
+    <hr>
+</div>
